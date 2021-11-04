@@ -1,0 +1,32 @@
+//?Global styles
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+//Varables(Primary colors and font)
+$light-blue: #1f78ff;
+$Blue: #001940;
+$font: "Russo One", sans-serif;
+//Mixins
+@mixin flex($justify, $align, $direction, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  @if ($wrap == white) {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,27 @@
+nav {
+  @include flex(space-between, center, row, black);
+  background-color: $Blue;
+  .logo {
+    height: 5vw;
+    width: 5vw;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .nav-links {
+    width: 50vw;
+    @include flex(center, center, row, black);
+    ul {
+      width: 30vw;
+      @include flex(space-between, center, row, black);
+      li {
+        a {
+          color: white;
+          font-family: $font;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
