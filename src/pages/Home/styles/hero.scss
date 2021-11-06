@@ -1,7 +1,6 @@
 .Hero {
   background-color: $light-blue;
   width: 100vw;
-  position: relative;
   @include flex(space-between, center, row, white);
   .text {
     margin: 50px;
@@ -27,6 +26,10 @@
       right: -50px;
       width: 100px;
       height: 100px;
+      overflow: visible;
+      stroke: #fff;
+      stroke-linejoin: round;
+      stroke-linecap: round;
     }
   }
   .img {

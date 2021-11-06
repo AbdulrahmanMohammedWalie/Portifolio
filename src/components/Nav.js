@@ -1,10 +1,22 @@
 import Logo from "../img/Logo.png";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   return (
-    <nav>
+    <motion.nav
+      initial={{ y: "-100%" }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, ease: "easeIn" }}
+    >
       <div className="logo">
-        <img src={Logo} alt="Logo" />
+        <motion.img
+          src={Logo}
+          alt="Logo"
+          alt="Computer"
+          initial={{ scale: 0, rotate: 0 }}
+          animate={{ scale: "100%", rotate: 360 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        />
       </div>
       <div className="nav-links">
         <ul>
@@ -19,7 +31,7 @@ const Nav = () => {
           </li>
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

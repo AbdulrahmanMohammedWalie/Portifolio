@@ -1,6 +1,7 @@
 nav {
   @include flex(space-between, center, row, black);
   background-color: $Blue;
+  width: 100vw;
   .logo {
     height: 5vw;
     width: 5vw;
