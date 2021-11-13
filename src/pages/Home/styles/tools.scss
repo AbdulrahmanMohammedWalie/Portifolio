@@ -1,0 +1,81 @@
+.tools {
+  @include flex(center, center, column, black);
+  width: 80%;
+  margin: auto auto 70px auto;
+  position: relative;
+  .svg {
+    position: absolute;
+    right: 120%;
+    svg {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      overflow: visible;
+      stroke: $light-blue;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+  }
+
+  h1 {
+    color: black;
+    font-size: 8rem;
+    font-family: $font;
+  }
+  .tool {
+    @include flex(space-between, center, row, white);
+    background-color: $Blue;
+    height: 30vh;
+    border-radius: 32px;
+    margin: 50px;
+    .header {
+      h1 {
+        color: white;
+        font-size: 2rem;
+        font-family: $font;
+        margin: 30px;
+      }
+    }
+    .img {
+      @include flex(center, center, row, black);
+      background-color: $light-blue;
+      height: 100%;
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and(min-width:260px) {
+  .img {
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .img {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    width: 100%;
+  }
+  .tools {
+    .svg {
+      position: absolute;
+      right: 135%;
+      svg {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        overflow: visible;
+        stroke: $light-blue;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+      }
+    }
+  }
+}

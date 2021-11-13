@@ -1,0 +1,38 @@
+.skills {
+  @include flex(space-between, center, column, white);
+  margin-bottom: 40px;
+  header {
+    width: 100vw;
+    @include flex(space-around, center, row, white);
+    .lines {
+      svg {
+        width: 10vw;
+      }
+    }
+    h1 {
+      margin-right: 40px;
+      font-family: $font;
+      font-size: 8rem;
+      font-weight: 200;
+    }
+  }
+  .skillsContainer {
+    width: 100vw;
+    @include flex(space-around, center, row, white);
+    .skill {
+      background-color: $light-blue;
+      width: 20rem;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 36px;
+      @include flex(space-between, center, row, black);
+      .icon {
+        color: $Blue;
+      }
+      h1 {
+        font-family: $font;
+        color: white;
+      }
+    }
+  }
+}

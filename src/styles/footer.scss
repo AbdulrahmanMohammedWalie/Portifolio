@@ -1,0 +1,28 @@
+@media screen and(min-width:515px) {
+  footer {
+    background-color: $Blue;
+    @include flex(space-between, center, row, black);
+    height: 20vh;
+    .text {
+      h1 {
+        color: white;
+        font-family: $font;
+        font-size: large;
+      }
+    }
+  }
+}
+@media screen and(max-width:514px) {
+  footer {
+    @include flex(center, center, column, white);
+    background-color: $Blue;
+    .text {
+      width: 25.6vw;
+      h1 {
+        color: white;
+        font-family: $font;
+        font-size: large;
+      }
+    }
+  }
+}

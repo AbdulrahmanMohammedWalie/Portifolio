@@ -18,6 +18,11 @@
       font-family: $font;
     }
   }
+  .img {
+    img {
+      height: 90vh;
+    }
+  }
   .svg {
     position: absolute;
     svg {
@@ -27,14 +32,24 @@
       width: 100px;
       height: 100px;
       overflow: visible;
-      stroke: #fff;
+      stroke: white;
       stroke-linejoin: round;
       stroke-linecap: round;
     }
   }
+}
+
+@media screen and(max-width:516px) {
   .img {
     img {
-      height: 90vh;
+      width: 100vw;
     }
+  }
+  .hero {
+    justify-content: center;
+  }
+  .text {
+    align-items: center;
+    width: 100vw;
   }
 }

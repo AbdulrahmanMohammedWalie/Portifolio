@@ -1,28 +1,68 @@
-nav {
+.nav {
   @include flex(space-between, center, row, black);
   background-color: $Blue;
   width: 100vw;
-  .logo {
-    height: 5vw;
-    width: 5vw;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
   .nav-links {
     width: 50vw;
     @include flex(center, center, row, black);
     ul {
-      width: 30vw;
+      width: 45vw;
       @include flex(space-between, center, row, black);
-      li {
-        a {
-          color: white;
-          font-family: $font;
-          font-size: 2rem;
-        }
-      }
+    }
+  }
+}
+
+.adds {
+  opacity: 0;
+  position: absolute;
+}
+
+.logo {
+  height: 5rem;
+  width: 5rem;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.anchor {
+  color: white;
+  font-family: $font;
+  font-size: 2rem;
+}
+
+.Mobile-nav {
+  position: absolute;
+  display: none;
+}
+
+@media screen and (max-width: 616px) {
+  .nav-links {
+    ul {
+      opacity: 0;
+      position: absolute;
+      left: 1000vw;
+    }
+  }
+  .adds {
+    opacity: 1;
+    cursor: pointer;
+    position: static;
+  }
+  .Mobile-nav {
+    transition: all 0.5s ease-in-out;
+    @include flex(space-between, center, row, black);
+    background-color: $Blue;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 100vw;
+    z-index: 20;
+    ul {
+      width: 100vw;
+      height: 100vh;
+      @include flex(space-around, center, column, black);
     }
   }
 }

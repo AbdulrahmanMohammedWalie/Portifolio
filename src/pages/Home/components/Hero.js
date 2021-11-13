@@ -1,6 +1,5 @@
 import heroImage from "../img/heroImage.png";
 import Circle from "../../../components/Circle";
-import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
@@ -19,7 +18,14 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          I am Abdulrahman
+          I am
+        </motion.h2>
+        <motion.h2
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          Abdulrahman
         </motion.h2>
         <motion.h3
           initial={{ opacity: 0, x: -100 }}
