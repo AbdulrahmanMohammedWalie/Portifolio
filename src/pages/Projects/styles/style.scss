@@ -1,0 +1,61 @@
+@import "../../../styles/global.scss";
+//Projects
+.Projects {
+  @include flex(center, center, column, black);
+  margin-top: 4rem;
+  h1 {
+    color: black;
+    font-size: 8rem;
+    font-family: $font;
+  }
+  .list {
+    @include flex(center, center, column, black);
+    .project {
+      @include flex(space-between, center, row, white);
+      cursor: pointer;
+      width: 80vw;
+      height: 90vh;
+      margin: 40px;
+      padding: 2rem;
+      border-radius: 26px;
+      background-color: $Blue;
+      position: relative;
+      .text {
+        height: 100%;
+        position: relative;
+        width: 70%;
+        h2 {
+          font-size: 7vw;
+          color: white;
+          font-family: $font;
+          position: absolute;
+          bottom: 80%;
+        }
+        h4 {
+          font-size: 6vw;
+          color: white;
+          font-family: $font;
+          position: absolute;
+          top: 60%;
+        }
+      }
+      .img {
+        background-color: $light-blue;
+        height: 100%;
+        width: 40%;
+        position: absolute;
+        left: 70%;
+        border-top-right-radius: 26px;
+        border-bottom-right-radius: 26px;
+        @include flex(center, center, row, black);
+        img {
+          background-color: white;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
+  }
+}
+//Upcoming Projects

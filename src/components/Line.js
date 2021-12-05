@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Line = ({ delay }) => {
-  const { ref, inView } = useInView({ threshold: 1 });
+  const { ref, inView } = useInView({ threshold: 1, triggerOnce: true });
   const Animation = useAnimation();
   useEffect(() => {
     if (inView) {

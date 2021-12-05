@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 const Tools = () => {
-  const [h1, h1View] = useInView({ threshold: 0 });
+  const [h1, h1View] = useInView({ threshold: 0, triggerOnce: true });
   const h1Animate = useAnimation();
   useEffect(() => {
     if (h1View) {

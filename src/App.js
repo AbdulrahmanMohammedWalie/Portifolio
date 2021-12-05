@@ -6,6 +6,7 @@ import Projects from "./pages/Projects/Projects";
 import { Route, Routes } from "react-router-dom";
 import Four from "./pages/four/Four";
 import Footer from "./components/Footer";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" exact element={<Home />} />
-        <Route path="/pro" exact element={<Projects />} />
+        <Route path="/projects" exact element={<Projects />} />
+        <Route path="/contact" exact element={<Contact />} />
         <Route path="/:something" element={<Four />} />
         <Route path="/:something/:something" element={<Four />} />
         <Route path="/:something/:something/:something" element={<Four />} />

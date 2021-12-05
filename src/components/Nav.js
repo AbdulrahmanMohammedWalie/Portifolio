@@ -22,8 +22,9 @@ const Nav = () => {
         className="nav"
       >
         <Link to="/">
-          <div className="logo">
+          <div className="logo mouse">
             <motion.img
+              className="img mouse"
               src={Logo}
               alt="Logo"
               alt="Computer"
@@ -37,17 +38,19 @@ const Nav = () => {
           <ul>
             <Link to="/">
               <li>
-                <a className="anchor">Home</a>
+                <a className="anchor mouse">Home</a>
               </li>
             </Link>
-            <Link to="/pro" styl>
+            <Link to="/projects">
               <li>
-                <a className="anchor">Projects</a>
+                <a className="anchor mouse">Projects</a>
               </li>
             </Link>
-            <li>
-              <a className="anchor">Contact</a>
-            </li>
+            <Link to="/contact">
+              <li>
+                <a className="anchor mouse">Contact</a>
+              </li>
+            </Link>
           </ul>
         </div>
         <div
@@ -69,17 +72,19 @@ const Nav = () => {
         <ul>
           <Link to="/">
             <li>
-              <a className="anchor">Home</a>
+              <a className="anchor mouse">Home</a>
             </li>
           </Link>
-          <Link to="/pro" styl>
+          <Link to="/projects">
             <li>
-              <a className="anchor">Projects</a>
+              <a className="anchor mouse">Projects</a>
             </li>
           </Link>
-          <li>
-            <a className="anchor">Contact</a>
-          </li>
+          <Link to="/contact">
+            <li>
+              <a className="anchor mouse">Contact</a>
+            </li>
+          </Link>
         </ul>
       </nav>
     </>

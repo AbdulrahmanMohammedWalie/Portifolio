@@ -39,5 +39,42 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="cursor"></div>
+    <style>
+      .cursor {
+        width: 48px;
+        height: 48px;
+        border: 2px solid #001940;
+        border-radius: 50%;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: border 0.5s ease-in-out, width 0.5s ease, height 0.5s ease;
+        transform-origin: 75% 75%;
+        z-index: 100000;
+      }
+      .hovering {
+        border: 2px solid white;
+        width: 100px;
+        height: 100px;
+      }
+      .blue {
+        border: 2px solid #1f78ff;
+      }
+    </style>
+    <script>
+      const cursor = document.querySelector(".cursor");
+      window.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+      window.addEventListener("mouseover", (e) => {
+        if (e.target.classList[1] === "mouse") {
+          cursor.classList.add("hovering");
+        } else {
+          cursor.classList.remove("hovering");
+        }
+      });
+    </script>
   </body>
 </html>

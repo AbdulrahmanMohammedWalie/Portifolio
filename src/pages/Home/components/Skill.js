@@ -3,12 +3,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-const Skill = ({ name, logo, delay }) => {
-  const { ref, inView } = useInView({ threshold: 0.5 });
+const Skill = ({ name, logo, thresh }) => {
+  const { ref, inView } = useInView({ threshold: thresh });
   const animation = useAnimation();
   useEffect(() => {
     if (inView) {
-      animation.start({ x: 0, transition: 10, delay: delay });
+      animation.start({ x: 0, transition: { duration: 1 } });
     } else {
       animation.start({ x: -100 });
     }

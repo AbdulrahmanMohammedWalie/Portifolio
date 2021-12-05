@@ -1,0 +1,48 @@
+@import "../../styles/global.scss";
+//syles{
+.p {
+  width: 100vw;
+  height: 100vh;
+  @include flex(center, center, row, black);
+  p {
+    color: $light-blue;
+    font-family: $font;
+    font-size: large;
+  }
+}
+.form {
+  margin: 3vh;
+  width: 100vw;
+  height: 70vh;
+  @include flex(center, center, row, black);
+  form {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    @include flex(space-between, center, column, black);
+    background-color: $Blue;
+    padding: 2rem;
+    border-radius: 100px;
+    label {
+      color: white;
+      font-family: $font;
+      font-size: large;
+    }
+  }
+  input,
+  textarea {
+    background-color: $light-blue;
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+  }
+  button {
+    background-color: $light-blue;
+    border: none;
+    margin: 20px;
+    width: 10%;
+    height: 5%;
+    padding: 1px;
+  }
+}
+//}

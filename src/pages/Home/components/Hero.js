@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="Hero">
+    <section className="Hero">
       <div className="text">
         <motion.h1
           initial={{ opacity: 0, x: -100 }}
@@ -44,7 +44,7 @@ const Hero = () => {
         />
       </div>
       <Circle />
-    </div>
+    </section>
   );
 };
 

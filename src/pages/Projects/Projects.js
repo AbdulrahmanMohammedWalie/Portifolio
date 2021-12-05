@@ -1,7 +1,10 @@
+import ProjectsList from "./components/ProjectsList";
+import "./styles/style.scss";
+
 const Pro = () => {
   return (
     <>
-      <h1>Pro</h1>
+      <ProjectsList />
     </>
   );
 };

@@ -6,9 +6,9 @@ import Skill from "./Skill";
 import { useEffect } from "react";
 
 const Skills = () => {
-  const [h1, h1View] = useInView({ threshold: 0 });
+  const [h1, h1View] = useInView({ threshold: 0, triggerOnce: true });
   const h1Animate = useAnimation();
-  let delay = 0;
+  let thresh = 0;
   useEffect(() => {
     if (h1View) {
       h1Animate.start({ opacity: 1, transition: { duration: 0.5 } });
@@ -29,13 +29,13 @@ const Skills = () => {
       </header>
       <div className="skillsContainer">
         {SkillsData.map((skill) => {
-          delay = delay + 0.5;
+          thresh = thresh + 0.1;
           return (
             <Skill
               name={skill.name}
               logo={skill.logo}
               key={skill.name}
-              delay={delay}
+              thresh={thresh}
             />
           );
         })}
