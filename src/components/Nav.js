@@ -36,7 +36,7 @@ const Nav = () => {
         </Link>
         <div className="nav-links">
           <ul>
-            <Link to="/Portifolio">
+            <Link to="/portifolio">
               <li>
                 <a className="anchor mouse">Home</a>
               </li>
