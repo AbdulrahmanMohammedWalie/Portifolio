@@ -28,6 +28,7 @@
     height: 30vh;
     border-radius: 32px;
     margin: 50px;
+    z-index: 43;
     .header {
       h1 {
         color: white;
@@ -49,21 +50,27 @@
 }
 
 @media only screen and(min-width:260px) {
-  .img {
-    border-top-right-radius: 32px;
-    border-bottom-right-radius: 32px;
-    width: 25%;
+  .tools {
+    .tool {
+      .img {
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+        width: 25%;
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 400px) {
-  .img {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 32px;
-    border-bottom-left-radius: 32px;
-    width: 100%;
-  }
   .tools {
+    .tool {
+      .img {
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 32px;
+        border-bottom-left-radius: 32px;
+        width: 100%;
+      }
+    }
     .svg {
       position: absolute;
       right: 135%;
